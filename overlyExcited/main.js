@@ -9,16 +9,28 @@ let sentence = ["The", "walrus", "danced", "through", "the", "trees", "in", "the
 function addExcitement(theWordArray) {
 
     // Each time the for loop executes, you're going to add one more word to this string
-    let buildMeUp = ""
-    console.log
-    // for (let i = 0; i < theWordArray.length; i++) {
-    //     // Concatenate the new word onto buildMeUp
-    //     buildMeUp += `${sentence[i]} `;
+    let buildMeUp = "";
+    let emptyArray = [];
+    for (let i = 0; i < theWordArray.length; i++) {
+        // Concatenate the new word onto buildMeUp
+        buildMeUp += ` ${theWordArray[i]}`;
+        emptyArray.push(buildMeUp);
+        if (emptyArray.length % 3 === 0) {
+            buildMeUp += "!";
+            console.log(buildMeUp)
+        // } else if (emptyArray.length === 6) {
+        //     console.log(buildMeUp + "!");
+        } else {
+            console.log(buildMeUp)
+        }
+    }
+}
+
+
     //     // Print buildMeUp to the console
     //     if (buildMeUp.length % 3 === 0) {
     //         console.log(buildMeUp + '!');
     //     } else {
-    //         console.log(buildMeUp);
     //     }
     // }
 
@@ -32,9 +44,8 @@ function addExcitement(theWordArray) {
     // } else {
     //     console.log(`${buildMeUp} `);
     // }
-}
 
-console.log(sentence.length)
+
 
 // Invoke the function and pass in the array
 addExcitement(sentence);
