@@ -1,4 +1,4 @@
-let bandNumber = 0
+let bandNumber = 0;
 
 const takeNumber = function (name) {
     /*
@@ -7,6 +7,7 @@ const takeNumber = function (name) {
     */
     bandNumber +=1; 
     return `${bandNumber}. ${name}`
+
 
 }
 
