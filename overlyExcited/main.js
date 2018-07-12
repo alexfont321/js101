@@ -57,27 +57,21 @@ let sentence = ["The", "walrus", "danced", "through", "the", "trees", "in", "the
 //     }
 // }
 
-function addExcitement(theWordArray, mark) {
+//PART 3
+
+const addExcitement = (theWordArray, mark) => {
     let buildMeUp = "";
     let emptyArray = [];
+    let bang = mark
 
     for (let i = 0; i < theWordArray.length; i++) {
         buildMeUp += ` ${theWordArray[i]}`;
         emptyArray.push(buildMeUp);
-        if (emptyArray.length % 3 === 0 && emptyArray.length / 3 === 1) {
-            buildMeUp += mark;
+        if (emptyArray.length % 3 === 0) {
+            buildMeUp += bang;
             console.log(buildMeUp)
-        } else if (emptyArray.length % 3 === 0 && emptyArray.length / 3 === 2) {
-            buildMeUp += mark + mark;
-            console.log(buildMeUp)
-        } else if (emptyArray.length % 3 === 0 && emptyArray.length / 3 === 3) {
-            buildMeUp += mark;
-            console.log(buildMeUp)
-        } else if (emptyArray.length % 3 === 0 && emptyArray.length / 3 === 4) {
-            buildMeUp += mark;
-            console.log(buildMeUp)
-        }
-        else {
+            bang = bang + mark
+        } else {
             console.log(buildMeUp)
         }
     }
@@ -87,4 +81,4 @@ function addExcitement(theWordArray, mark) {
 
 
 // Invoke the function and pass in the array
-addExcitement(sentence, "?");
+addExcitement(sentence, "%");
